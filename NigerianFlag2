@@ -1,0 +1,36 @@
+
+--Using a Single Loop--
+
+public class FlagOfNigeriaSingleLoop {
+    public static void main(String[] args) {
+        String pattern = "* * * * = = = = = = =\n"
+                       + "* * * * = = = = = = =\n"
+                       + "* * * * = = = = = = =\n"
+                       + "= = = = = = = = = = =\n"
+                       + "= = = = = = = = = = =\n"
+                       + "= = = = = = = = = = =";
+        System.out.println(pattern);
+    }
+}
+
+--Using a Nested Loop--
+
+public class FlagOfNigeriaNestedLoop {
+    public static void main(String[] args) {
+        for (int row = 1; row <= 6; row++) {
+            if (row <= 3) {
+                for (int i = 1; i <= 4; i++) {
+                    System.out.print("* ");
+                }
+                for (int j = 1; j <= 7; j++) {
+                    System.out.print("= ");
+                }
+            } else {
+                for (int k = 1; k <= 11; k++) {
+                    System.out.print("= ");
+                }
+            }
+            System.out.println(); // Move to the next row
+        }
+    }
+}
